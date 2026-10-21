@@ -1,0 +1,48 @@
+name: 提交问题或解决案例
+description: 记录现象、证据、环境、解决步骤和验证结果
+title: "[问题] "
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 提交类型
+      options:
+        - 新问题 待定位
+        - 已处理案例
+        - 文档错误或更正
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 环境与版本
+      description: 系统、Codex 版本、桌面或 CLI、使用的主机；未记录的项目写未知
+    validations:
+      required: true
+  - type: textarea
+    id: symptom
+    attributes:
+      label: 现象与重现步骤
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 原因与证据
+      description: 区分已确认、推测和未知。仅提交脱敏摘要，不上传原始日志、配置或数据库
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: 已尝试步骤及结果
+      description: 是否做过备份，实际改动，如何验收，是否重启后仍有效
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 公开前核对
+      options:
+        - label: 我已移除凭据、聊天正文、私人路径及真实项目或聊天标识
+          required: true

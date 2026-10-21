@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
+doctor-report*.json
+local-reports/
+local-backups/
+.env
+.env.*
+auth.json
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.db
+*.log
+.codex-global-state.json*
